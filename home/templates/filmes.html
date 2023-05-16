@@ -1,0 +1,18 @@
+{% extends 'home.html' %}
+
+{% block title %}{% endblock %}
+
+{% block body %}
+<form action="{% url 'filmes' %}" method="get" class="form-inline">
+    <input type="text" name="nome" placeholder="Digite seu filme"><br>
+    <input type="submit" value="Pesquisa" class="btn btn-success">
+</form>
+
+        <div class="grid">
+    {% for filme in filmes %}
+    <iframe width="540" height="280" frameborder="0" src="{{filme.url}}" allowfullscreen ></iframe>
+    {% endfor %}
+        </div>
+
+
+{% endblock %}
