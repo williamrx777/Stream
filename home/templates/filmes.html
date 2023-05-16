@@ -3,7 +3,8 @@
 {% block title %}{% endblock %}
 
 {% block body %}
-<form action="{% url 'filmes' %}" method="get" class="form-inline">
+
+<form action="{% url 'filmes' %}" method="get" class="form-inline" style="margin:15px;display: flex;justify-content: flex-end;">
     <input type="text" name="nome" placeholder="Digite seu filme"><br>
     <input type="submit" value="Pesquisa" class="btn btn-success">
 </form>

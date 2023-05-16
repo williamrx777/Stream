@@ -15,8 +15,6 @@ def filmes(request):
             nome
         return render(request,'filmes.html',{'filmes':filmes,'nome':nome})
 
-def series(request):
-    return render(request,'series.html')
 
 
 def animes(request):
