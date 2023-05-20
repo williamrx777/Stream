@@ -20,16 +20,16 @@
         <a class="btn btn-primary" href="/cdz/{{ cdz.pk|add:'1' }}">proximo</a>
     {% endif %}
     <p>
-  <button class="btn btn-primary" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
+  <button class="btn btn-dark" type="button" data-bs-toggle="collapse" data-bs-target="#collapseWidthExample" aria-expanded="false" aria-controls="collapseWidthExample">
     Todos os episodios
   </button>
 </p>
-<div style="min-height: 120px;">
+<div style="max-width: 100%;">
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
     <div class="card card-body" style="max-width: 100%;">
       {% for episodio in episodios %}
-    <a class="btn btn-outline-primary" href="{{episodio.url}}">{{episodio.nome}}</a>
-{% endfor %}
+    <a class="btn btn-outline-dark" href="/cdz/{{episodio.codigo}}">{{episodio.nome}}</a>
+        {% endfor %}
     </div>
   </div>
 </div>
