@@ -17,3 +17,15 @@ class StreamApiView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Stream.objects.all()
     serializer_class = StreamSerializers
     pass
+
+class CdzsApiView(generics.ListCreateAPIView):
+    # SELECT * FROM Produto
+    queryset = Cdz.objects.all()
+    serializer_class = CdzSerializers
+    pass
+
+# GET, UPDATE, DELETE -> Possui parâmetros
+class CdzApiView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Cdz.objects.all()
+    serializer_class = CdzSerializers
+    pass
