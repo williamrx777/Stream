@@ -11,6 +11,7 @@
 
 <h1 style="color: white;" class="h1 text-center">Os Cavaleiros Dos Zodiacos</h1>
 
+
 <div class="container text-center">
     {% if cdz.pk > 1 %}
         <a class="btn btn-success" href="/cdz/{{ cdz.pk|add:'-1' }}">voltar</a>
@@ -26,9 +27,9 @@
 </p>
 <div style="max-width: 100%;">
   <div class="collapse collapse-horizontal" id="collapseWidthExample">
-    <div class="card card-body" style="max-width: 100%;">
+    <div class="card card-body" style="max-width: 100%; background-color:#000">
       {% for episodio in episodios %}
-    <a class="btn btn-outline-dark" href="/cdz/{{episodio.codigo}}">{{episodio.nome}}</a>
+    <a class="btn btn-outline-light" href="/cdz/{{episodio.codigo}}">{{episodio.nome}}</a>
         {% endfor %}
     </div>
   </div>

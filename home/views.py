@@ -24,5 +24,5 @@ def animes(request):
 
 def cdz(request,codigo):
     cdz = Cdz.objects.get(pk=codigo)
-    episodios = Cdz.objects.all()
+    episodios = Cdz.objects.all().order_by('codigo')
     return render(request, 'cdz.html', {'cdz': cdz, 'codigo': codigo,'episodios':episodios})
