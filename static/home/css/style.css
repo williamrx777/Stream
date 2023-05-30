@@ -96,7 +96,19 @@ body {
 .grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    max-width: 90%;
+    max-width: 100%;
     margin: 0 auto;
     grid-gap: 20px;
 }
+
+@media screen and (width:600) {
+    .grid {
+    display: grid;
+    
+    max-width: 100%;
+    margin: 0 auto;
+    grid-gap: 20px;
+}
+
+}
+
