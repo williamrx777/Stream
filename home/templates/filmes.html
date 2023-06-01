@@ -7,17 +7,17 @@
 
 {% block body %}
 
-<div class="container-fluid text-center">
+
 <form action="{% url 'filmes' %}" method="get" class="form-inline" style="margin:15px;display: flex;justify-content: flex-end;">
     <input type="text" name="nome" placeholder="Digite seu filme"><br>
     <input type="submit" value="Pesquisa" class="btn btn-success">
 </form>
-<div class="row row-cols-lg-5 gap-4">
+<div class="container ">
+
     {% for filme in filmes %}
-    <iframe class="col-lg-5" width="540" height="280" frameborder="0" src="{{filme.url}}" allowfullscreen ></iframe>
+    <iframe  width="640" height="360" frameborder="0" src="{{filme.url}}" allowfullscreen ></iframe>
     {% endfor %}
 
-</div>
 </div>
 
 
