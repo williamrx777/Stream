@@ -2,7 +2,7 @@ from django.shortcuts import render
 from rest_framework import generics
 from .models import *
 from .serializers import *
-
+from rest_framework.generics import get_object_or_404
 # Create your views here.
 # Não possui parâmetros
 # POST, GET ALL -> Cadastrar o produto, listar todos os produtos

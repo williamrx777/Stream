@@ -12,10 +12,10 @@
     <input type="text" name="nome" placeholder="Digite seu filme"><br>
     <input type="submit" value="Pesquisa" class="btn btn-success">
 </form>
-<div class="container ">
+<div class="container-fluid ">
 
     {% for filme in filmes %}
-    <iframe  width="640" height="360" frameborder="0" src="{{filme.url}}" allowfullscreen ></iframe>
+    <iframe style="margin:3px;" width="340" height="191" src="{{filme.url}}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen ></iframe>
     {% endfor %}
 
 </div>
